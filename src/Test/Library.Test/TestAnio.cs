@@ -13,7 +13,7 @@ namespace Library.Test
         public void AnioEsMayorIgualQueCero()
         {   Formato formato = new Formato();
             string formateada = Formato.ChangeFormat("10/11/1977");
-            int resultado = int.Parse(formateada.Substring(0,4));
+            int resultado = int.Parse(formateada.Substring(6));
             Assert.Greater(resultado,0);
         }
                 [Test]
@@ -21,7 +21,7 @@ namespace Library.Test
         {   int limite = 9999;
             Formato formato = new Formato();
             string formateada = Formato.ChangeFormat("10/11/1977");
-            int resultado = int.Parse(formateada.Substring(0,4));
+            int resultado = int.Parse(formateada.Substring(6));
             Assert.LessOrEqual(resultado,limite);
         }
     }

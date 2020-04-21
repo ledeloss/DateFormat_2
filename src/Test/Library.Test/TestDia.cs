@@ -15,7 +15,7 @@ namespace Library.Test
         public void DiaEsMayorQueCero()
         {   Formato formato = new Formato();
             string formateada = Formato.ChangeFormat("10/11/1977");
-            int dia = int.Parse(formateada.Substring(8,2));
+            int dia = int.Parse(formateada.Substring(0,2));
             Assert.Greater(dia,0);
         }
                 [Test]
@@ -23,7 +23,7 @@ namespace Library.Test
         {   int limite = 31;
             Formato formato = new Formato();
             string formateada = Formato.ChangeFormat("10/13/1977");
-            int dia = int.Parse(formateada.Substring(8,2));
+            int dia = int.Parse(formateada.Substring(0,2));
             Assert.LessOrEqual(dia,limite);
         }
         
