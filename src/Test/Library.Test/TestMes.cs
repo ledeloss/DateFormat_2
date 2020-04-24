@@ -15,7 +15,7 @@ namespace Library.Test
         public void MesEsMayorQueCero()
         {   Formato formato = new Formato();
             string formateada = Formato.ChangeFormat("10/11/1977");
-            int mes = int.Parse(formateada.Substring(5,2));
+            int mes = int.Parse(formateada.Substring(3,2));
             Assert.Greater(mes,0);
         }
                 [Test]
